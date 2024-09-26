@@ -40,10 +40,6 @@ namespace WealthWatcher.Tabs
                 firstVisibleIndex = Math.Max(0,              (int)((scrollPosition.y - LineHeight/*add extra line on start*/) / LineHeight)),
                 lastVisibleIndex = Math.Min(items.Count - 1, (int)(firstVisibleIndex + maxVisibleLines + 1/*add extra line on end*/));
 
-            if (Settings.Debug)
-            {
-                Log.Warning($"[WW] itemsCount/visibleCount: {items.Count}/{lastVisibleIndex-firstVisibleIndex}; first/last: {firstVisibleIndex}/{lastVisibleIndex}");
-            }
 
             DrawHeadLine(viewRect.width, LineHeight, ref y);
 
@@ -52,10 +48,6 @@ namespace WealthWatcher.Tabs
             for (int i = firstVisibleIndex; i <= lastVisibleIndex; i++)
             {
                 DrawLine(items[i], viewRect.width, LineHeight, ref y);
-                if (Settings.Debug)
-                {
-                    Log.Warning($"  {items[i].Name}:{i} y={y}");
-                }
             }
         }
 

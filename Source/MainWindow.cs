@@ -46,16 +46,6 @@ namespace WealthWatcher
 
             Text.Font = GameFont.Small;
             Text.Anchor = TextAnchor.MiddleLeft;
-            if (Settings.ShowRadePoints)
-            {
-                IIncidentTarget incidentTarget = Find.CurrentMap;
-                if (incidentTarget != null)
-                {
-                    Find.CurrentMap?.wealthWatcher?.ForceRecount();
-                    _raidPoints = "CurrentRaidPoints".Translate(
-                        StorytellerUtility.DefaultThreatPointsNow(incidentTarget).ToString("F0"));
-                }
-            }
             Text.Anchor = TextAnchor.UpperLeft;
 
             _activeTab?.Update();
@@ -137,9 +127,6 @@ namespace WealthWatcher
             yield return new FloatMenuOption(ItemsTab.CAPTION, SelectTab<ItemsTab>);
             yield return new FloatMenuOption(BuildingsTab.CAPTION, SelectTab<BuildingsTab>);
             yield return new FloatMenuOption(PawnsTab.CAPTION, SelectTab<PawnsTab>);
-            
-            if (Settings.ShowRadePoints)
-                yield return new FloatMenuOption(RadePointsTab.CAPTION, SelectTab<RadePointsTab>);
         }
 
         private IEnumerable<FloatMenuOption> GetSortersList(Action<TabComparer> setSort)

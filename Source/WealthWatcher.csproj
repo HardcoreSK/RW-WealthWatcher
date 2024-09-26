@@ -57,19 +57,14 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
-    <Compile Include="Harmony.cs" />
     <Compile Include="ListWealthExtension.cs" />
     <Compile Include="MainWindow.cs" />
-    <Compile Include="Settings.cs" />
-    <Compile Include="RadePointsSummary.cs" />
     <Compile Include="Tabs\PawnsTab.cs" />
     <Compile Include="Tabs\Sorting\TabComparer.cs" />
     <Compile Include="Tabs\Tab.cs" />
     <Compile Include="Tabs\BuildingsTab.cs" />
     <Compile Include="Tabs\ItemsTab.cs" />
-    <Compile Include="Tabs\RadePointsTab.cs" />
     <Compile Include="Tabs\WealthTab.cs" />
-    <Compile Include="WealthWatcher.cs" />
     <Compile Include="WealthWatcherDefOf.cs" />
     <Compile Include="WeatlthWatcherComponent.cs" />
   </ItemGroup>
@@ -81,30 +76,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="0Harmony">
-      <HintPath>..\..\..\#PACKAGES_1.3#\0Harmony.dll</HintPath>
-    </Reference>
-    <Reference Include="Assembly-CSharp">
-      <HintPath>..\..\..\#PACKAGES_1.3#\Assembly-CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine">
-      <HintPath>..\..\..\#PACKAGES_1.3#\UnityEngine.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.CoreModule">
-      <HintPath>..\..\..\#PACKAGES_1.3#\UnityEngine.CoreModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.IMGUIModule">
-      <HintPath>..\..\..\#PACKAGES_1.3#\UnityEngine.IMGUIModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="UnityEngine.TextRenderingModule">
-      <HintPath>..\..\..\#PACKAGES_1.3#\UnityEngine.TextRenderingModule.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+    <PackageReference Include="Krafs.Rimworld.Ref">
+      <Version>1.5.4104</Version>
+    </PackageReference>
+    <PackageReference Include="Lib.Harmony">
+      <Version>2.3.3</Version>
+    </PackageReference>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

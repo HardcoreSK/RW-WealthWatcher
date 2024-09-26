@@ -7,7 +7,7 @@
   <capPawnsTab>Пешки</capPawnsTab>
   <capRadePointsTab>Очки рейда</capRadePointsTab>
   <btnSelectTab>Вкладка: {0}</btnSelectTab>
-  <lblOrder>Подбор по:</lblOrder>
+  <lblOrder>Сортировать по:</lblOrder>
   
   <TabComparer_None>Ничего</TabComparer_None>
   <TabComparer_MarketValue>Цена</TabComparer_MarketValue>
