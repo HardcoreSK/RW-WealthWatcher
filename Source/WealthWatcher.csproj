@@ -57,6 +57,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
+    <Compile Include="HarmonyPatches.cs" />
     <Compile Include="ListWealthExtension.cs" />
     <Compile Include="MainWindow.cs" />
     <Compile Include="Tabs\PawnsTab.cs" />
@@ -65,8 +66,8 @@
     <Compile Include="Tabs\BuildingsTab.cs" />
     <Compile Include="Tabs\ItemsTab.cs" />
     <Compile Include="Tabs\WealthTab.cs" />
-    <Compile Include="WealthWatcherDefOf.cs" />
-    <Compile Include="WeatlthWatcherComponent.cs" />
+    <Compile Include="Util.cs" />
+    <Compile Include="WealthWatcher.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">

@@ -15,7 +15,6 @@ namespace WealthWatcher
     {
         private static ITab _activeTab = null;
         private Vector2 _scrollPosition = new Vector2(0, 0);
-        private string _raidPoints = null;
         private TabComparer _sort1 = new TabComparer_MarketValueAll(), _sort2 = new TabComparer_None();
         private List<TabComparer> _listComparers;
 
@@ -62,12 +61,12 @@ namespace WealthWatcher
             // draw button select tab
             float btnWidth = 150f;
             float btnHeight = 30f;
-            float lblOrderWidth = 80f;
+            float lblOrderWidth = 120f;
             float btnOrderWidth = 120f;
             Rect btnSelectTabRect = new Rect(x: 10f, y: y, width: btnWidth, height: btnHeight);
             Rect lblOrderRect = new Rect(x: btnSelectTabRect.xMax + 10f, y: y, width: lblOrderWidth, height: btnHeight);
             Rect btnOrder1Rect = new Rect(x: lblOrderRect.xMax, y: y, width: btnOrderWidth, height: btnHeight);
-            Rect btnOrder2Rect = new Rect(x: btnOrder1Rect.xMax, y: y, width: btnOrderWidth, height: btnHeight);
+            Rect btnOrder2Rect = new Rect(x: btnOrder1Rect.xMax + 10f, y: y, width: btnOrderWidth, height: btnHeight);
             string btnCaption = _activeTab?.Caption ?? "capSelectTab".Translate();
             
             if (Widgets.ButtonText(btnSelectTabRect, "btnSelectTab".Translate(btnCaption)))
@@ -93,15 +92,7 @@ namespace WealthWatcher
                     _activeTab?.Sort(_sort1, _sort2);
                 }).ToList()));
             }
-
-            // draw raid points
-            if (_raidPoints != null)
-            {
-                Rect labelRaidPointsRect = new Rect(x: btnOrder2Rect.xMax + 10f, y: y, width: 100f, height: btnHeight);
-                Widgets.Label(labelRaidPointsRect, _raidPoints);
-            }
-
-            y += btnHeight + 20f;
+            y += btnHeight + 10f;
 
             // draw content in scroll view
             Rect outRect = new Rect(x: 0f, y: y, width: rect.width, height: rect.height - y);

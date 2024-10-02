@@ -40,4 +40,6 @@
   <Settings_ShowRadePoints>Show raid strength(points)</Settings_ShowRadePoints>
   <Settings_UnlockManualDamageItems>Allow attack items(command)</Settings_UnlockManualDamageItems>
   
+  <WealthWatcherTip>Open WealthWatcher window</WealthWatcherTip>
+  
 </LanguageData>

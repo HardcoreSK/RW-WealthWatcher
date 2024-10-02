@@ -4,7 +4,7 @@
 	<supportedVersions>
 		<li>1.5</li>
 	</supportedVersions>
-	<packageId>PirateBY.WealthWatcher</packageId>
+	<packageId>PirateBY.WealthWatcherLite</packageId>
 	<modDependencies>
 		<li>
 			<packageId>brrainz.harmony</packageId>
@@ -21,9 +21,8 @@
 	<author>PirateBY</author>
 	<description>
 English:	
-   -Overview wealth of the colony
-   Default key: Z
+   - Colony wealth overview
 Русский:
-   -Обзор богатства колонии
-   Кнопка по умолчанию: Z</description>
+   - Обзор богатства колонии
+   </description>
 </ModMetaData>

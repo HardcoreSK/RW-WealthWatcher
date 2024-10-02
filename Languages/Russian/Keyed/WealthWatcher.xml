@@ -41,4 +41,6 @@
   <Settings_ShowRadePoints>Показывать силу рейда</Settings_ShowRadePoints>
   <Settings_UnlockManualDamageItems>Разрешить атаковать предметы(приказ)</Settings_UnlockManualDamageItems>
   
+  <WealthWatcherTip>Открыть окно WealthWatcher</WealthWatcherTip>
+  
 </LanguageData>
